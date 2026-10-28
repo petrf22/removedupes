@@ -51,10 +51,10 @@ RemoveDupes.MessengerOverlay.onKeyPress = function (ev, searchData) {
 };
 
 RemoveDupes.MessengerOverlay.isSkippedSpecialFolder = function (folder) {
-  // Note: Some folders are special but not skipped: The root folder and the Inbox.
+  // Note: Some folders are special but not skipped: The root folder, the Inbox and the Archives folder.
   return (!(folder.canRename)) &&
          (folder.rootFolder != folder) &&
-         !(folder.flags & RemoveDupes.FolderFlags.Inbox);
+         !(folder.flags & (RemoveDupes.FolderFlags.Inbox | RemoveDupes.FolderFlags.Archive));
 };
 
 RemoveDupes.MessengerOverlay.beginSearchForDuplicateMessages = function (searchData, event) {

@@ -9,6 +9,7 @@ RemoveDupes.FolderFlags = {
   Inbox:   Ci.nsMsgFolderFlags?.Inbox   ?? 0x1000,
   Virtual: Ci.nsMsgFolderFlags?.Virtual ?? 0x0020,
   Trash:   Ci.nsMsgFolderFlags?.Trash   ?? 0x0100,
+  Archive: Ci.nsMsgFolderFlags?.Archive ?? 0x4000,
 };
 
 RemoveDupes.MessageStatusFlags = {
